@@ -612,22 +612,17 @@ h4 {
 }
 
 .klant-logo img {
-  max-height: 80px;
-  max-width: 85%;
+  max-height: 120px;
+  max-width: 90%;
   width: auto;
   object-fit: contain;
   transition: all var(--transition-base);
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .klant-logo:hover img {
+  transform: scale(1.05);
   opacity: 1;
-}
-
-/* Klanten section on red background */
-.klanten-section .klanten-grid {
-  gap: var(--spacing-6);
 }
 
 @media (max-width: 1024px) {
