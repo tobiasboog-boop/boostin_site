@@ -312,6 +312,11 @@ h4 {
 .logo img {
   height: 40px;
   width: auto;
+  /* Move logo up so "boostin" text aligns with nav items */
+  /* Text center is at 56% of logo height, nav center is at 50% */
+  /* Offset: (56% - 50%) × 40px = 2.4px up */
+  position: relative;
+  top: -3px;
 }
 
 /* Desktop menu - visible by default */
@@ -319,8 +324,6 @@ h4 {
   display: flex;
   align-items: center;
   gap: var(--spacing-2);
-  /* Shift nav items down slightly to align with "boostin" text baseline */
-  padding-top: 6px;
 }
 
 /* Mobile menu - hidden by default, outside header for z-index */
@@ -487,6 +490,7 @@ h4 {
     opacity: 1;
     visibility: visible;
     transform: none;
+    transition: none;
     box-shadow: none;
     display: none;
     width: 100%;
@@ -495,7 +499,7 @@ h4 {
     border-radius: 0;
     background-color: var(--color-gray-100);
     margin: 0;
-    padding: var(--spacing-2) 0;
+    padding: 0;
   }
 
   .nav-menu--mobile .dropdown-menu li {
@@ -515,6 +519,7 @@ h4 {
     font-size: var(--font-size-sm);
     border-radius: 0;
     background-color: transparent;
+    transition: none;
   }
 
   .nav-menu--mobile .dropdown-link:hover,
