@@ -624,13 +624,12 @@ h4 {
   max-width: 85%;
   width: auto;
   object-fit: contain;
-  /* Red-white duotone filter for Boostin branding (#ff144f) */
-  filter: grayscale(100%) sepia(100%) saturate(300%) hue-rotate(315deg) brightness(0.95);
   transition: all var(--transition-base);
+  opacity: 0.7;
 }
 
 .klant-logo:hover img {
-  filter: none;
+  opacity: 1;
 }
 
 @media (max-width: 1024px) {
