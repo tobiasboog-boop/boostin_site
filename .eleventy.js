@@ -19,6 +19,11 @@ module.exports = function(eleventyConfig) {
   // Shortcodes
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+  // Date filter for sitemap
+  eleventyConfig.addFilter("isoDate", function(date) {
+    return new Date(date).toISOString().split('T')[0];
+  });
+
   // URL filter for pathPrefix support
   eleventyConfig.addFilter("url", function(url) {
     const prefix = process.env.ELEVENTY_PATH_PREFIX || "";
