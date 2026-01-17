@@ -2,14 +2,15 @@
   <div class="container">
     <nav class="nav">
       <a href="{{ '/' | url }}" class="logo">
-        <img src="{{ '/assets/images/boostin-logo.svg' | url }}" alt="{{ site.name }}" width="180" height="50">
+        <img src="{{ '/assets/images/boostin-logo.svg' | url }}" alt="{{ site.name }}">
       </a>
 
       <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false">
         <span class="hamburger"></span>
       </button>
 
-      <ul class="nav-menu">
+      <!-- Desktop menu (binnen header) -->
+      <ul class="nav-menu nav-menu--desktop">
         {% for item in navigation.main %}
         <li class="nav-item{% if item.children %} has-dropdown{% endif %}">
           <a href="{{ item.url | url }}" class="nav-link{% if page.url == item.url %} active{% endif %}">
@@ -37,3 +38,32 @@
     </nav>
   </div>
 </header>
+
+<!-- Mobile menu (buiten header voor z-index) -->
+<nav class="nav-menu nav-menu--mobile" aria-label="Mobile navigatie">
+  <ul>
+    {% for item in navigation.main %}
+    <li class="nav-item{% if item.children %} has-dropdown{% endif %}">
+      <a href="{{ item.url | url }}" class="nav-link{% if page.url == item.url %} active{% endif %}">
+        {{ item.label }}
+        {% if item.children %}
+        <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+          <path d="M6 8L2 4h8L6 8z"/>
+        </svg>
+        {% endif %}
+      </a>
+      {% if item.children %}
+      <ul class="dropdown-menu">
+        {% for child in item.children %}
+        <li>
+          <a href="{{ child.url | url }}" class="dropdown-link{% if page.url == child.url %} active{% endif %}">
+            {{ child.label }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
