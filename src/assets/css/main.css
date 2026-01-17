@@ -734,6 +734,15 @@ h4 {
   color: var(--color-white);
 }
 
+.footer .btn-white {
+  color: var(--color-primary);
+}
+
+.footer .btn-white:hover {
+  color: var(--color-primary);
+  background-color: var(--color-gray-100);
+}
+
 .footer-links li {
   margin-bottom: var(--spacing-2);
 }
