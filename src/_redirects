@@ -1,0 +1,16 @@
+# Cloudflare Pages Redirects
+# Format: /old-path /new-path [status-code]
+
+# Old WordPress URLs (if needed)
+/wie-is-boostin/ /wat-is-boostin/ 301
+/boostin-methode/ / 301
+/kennisdeling/ / 301
+/power-bi-trainingen/ /trainingen/ 301
+/power-bi-basis-trainingen/ /trainingen/basis-financials/ 301
+/power-bi-advanced-trainingen/ /trainingen/advanced/ 301
+/dynamics365-service/ /dynamics-365/customer-service/ 301
+/dynamics365-marketing/ /dynamics-365/marketing/ 301
+/dynamics365-sales/ /dynamics-365/sales/ 301
+/powerbi-trainingen-door-en-voor-praktijkmensen/ /trainingen/ 301
+/power-bi-basis-training-financials/ /trainingen/basis-financials/ 301
+/power-bi-basis-training-sales/ /trainingen/basis-sales/ 301

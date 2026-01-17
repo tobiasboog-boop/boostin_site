@@ -1,0 +1,17 @@
+{
+  "name": "Boostin Consultancy",
+  "tagline": "Samen toekomstbestendig ondernemen",
+  "description": "Boostin daagt organisaties uit op strategieniveau en helpt bij data-analyse en executie met Power BI dashboards.",
+  "url": "https://boostin-consultancy.nl",
+  "email": "info@boostin-consultancy.nl",
+  "phone": "+31 30 272 9544",
+  "address": {
+    "street": "Kerkhofstraat 21",
+    "postal": "5554 HG",
+    "city": "Valkenswaard"
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/boostin-consultancy/"
+  },
+  "parent": "Data Performance Groep (DPG)"
+}

@@ -1,0 +1,57 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Company Info -->
+      <div class="footer-col">
+        <a href="/" class="footer-logo">
+          <img src="/assets/images/boostin-logo-white.svg" alt="{{ site.name }}" width="160" height="45">
+        </a>
+        <p class="footer-tagline">{{ site.tagline }}</p>
+        <p class="footer-parent">Onderdeel van {{ site.parent }}</p>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <address>
+          {{ site.address.street }}<br>
+          {{ site.address.postal }} {{ site.address.city }}
+        </address>
+        <p>
+          <a href="tel:{{ site.phone | replace(' ', '') }}">{{ site.phone }}</a><br>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </p>
+      </div>
+
+      <!-- Sitemap -->
+      <div class="footer-col">
+        <h4>Sitemap</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/wat-is-boostin/">Wat is Boostin?</a></li>
+          <li><a href="/consultancy/">Consultancy</a></li>
+          <li><a href="/trainingen/">Trainingen</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <div class="footer-col">
+        <h4>Klaar voor de volgende stap?</h4>
+        <p>Neem contact met ons op en ontdek wat Boostin voor jouw organisatie kan betekenen.</p>
+        <a href="/contact/" class="btn btn-white">Neem contact op</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <p>&copy; {% year %} {{ site.name }}. Alle rechten voorbehouden.</p>
+      </div>
+      <ul class="footer-legal-links">
+        {% for item in navigation.footer %}
+        <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</footer>

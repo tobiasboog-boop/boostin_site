@@ -1,0 +1,23 @@
+{
+  "name": "boostin-site",
+  "version": "1.0.0",
+  "description": "Boostin Consultancy website",
+  "main": ".eleventy.js",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rimraf _site"
+  },
+  "keywords": [
+    "eleventy",
+    "boostin",
+    "power-bi",
+    "consultancy"
+  ],
+  "author": "Data Performance Groep",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "rimraf": "^5.0.5"
+  }
+}
