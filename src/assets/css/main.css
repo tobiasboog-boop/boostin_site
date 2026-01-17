@@ -440,7 +440,7 @@ h4 {
     background-color: var(--color-white);
     transform: translateX(100%);
     transition: transform var(--transition-base);
-    z-index: 150;
+    z-index: 999;
     overflow-y: auto;
   }
 
