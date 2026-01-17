@@ -291,7 +291,7 @@ h4 {
 .header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   background-color: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   border-bottom: 3px solid var(--color-primary);
@@ -424,11 +424,12 @@ h4 {
 @media (max-width: 1024px) {
   .nav-toggle {
     display: block;
+    z-index: 200;
   }
 
   .nav-menu {
     position: fixed;
-    top: 80px;
+    top: 90px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -439,6 +440,8 @@ h4 {
     background-color: var(--color-white);
     transform: translateX(100%);
     transition: transform var(--transition-base);
+    z-index: 150;
+    overflow-y: auto;
   }
 
   .nav-menu.active {
@@ -452,6 +455,7 @@ h4 {
   .nav-link {
     padding: var(--spacing-4);
     font-size: var(--font-size-base);
+    justify-content: flex-start;
   }
 
   .dropdown-menu {
@@ -462,10 +466,19 @@ h4 {
     box-shadow: none;
     padding-left: var(--spacing-4);
     display: none;
+    min-width: auto;
+    border: none;
+    background-color: var(--color-gray-50);
+    margin: 0 calc(-1 * var(--spacing-4));
+    padding: var(--spacing-2) var(--spacing-4) var(--spacing-2) var(--spacing-8);
   }
 
   .nav-item.active .dropdown-menu {
     display: block;
+  }
+
+  .dropdown-link {
+    padding: var(--spacing-3) var(--spacing-4);
   }
 }
 
