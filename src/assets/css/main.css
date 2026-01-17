@@ -440,8 +440,9 @@ h4 {
     background-color: var(--color-white);
     transform: translateX(100%);
     transition: transform var(--transition-base);
-    z-index: 999;
+    z-index: 9999;
     overflow-y: auto;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
   }
 
   .nav-menu.active {
