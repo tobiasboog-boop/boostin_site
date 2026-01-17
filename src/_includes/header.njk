@@ -1,8 +1,8 @@
 <header class="header">
   <div class="container">
     <nav class="nav">
-      <a href="/" class="logo">
-        <img src="/assets/images/boostin-logo.svg" alt="{{ site.name }}" width="180" height="50">
+      <a href="{{ '/' | url }}" class="logo">
+        <img src="{{ '/assets/images/boostin-logo.svg' | url }}" alt="{{ site.name }}" width="180" height="50">
       </a>
 
       <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false">
@@ -12,7 +12,7 @@
       <ul class="nav-menu">
         {% for item in navigation.main %}
         <li class="nav-item{% if item.children %} has-dropdown{% endif %}">
-          <a href="{{ item.url }}" class="nav-link{% if page.url == item.url %} active{% endif %}">
+          <a href="{{ item.url | url }}" class="nav-link{% if page.url == item.url %} active{% endif %}">
             {{ item.label }}
             {% if item.children %}
             <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
@@ -24,7 +24,7 @@
           <ul class="dropdown-menu">
             {% for child in item.children %}
             <li>
-              <a href="{{ child.url }}" class="dropdown-link{% if page.url == child.url %} active{% endif %}">
+              <a href="{{ child.url | url }}" class="dropdown-link{% if page.url == child.url %} active{% endif %}">
                 {{ child.label }}
               </a>
             </li>

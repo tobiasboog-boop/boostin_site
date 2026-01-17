@@ -19,7 +19,17 @@ module.exports = function(eleventyConfig) {
   // Shortcodes
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+  // URL filter for pathPrefix support
+  eleventyConfig.addFilter("url", function(url) {
+    const prefix = process.env.ELEVENTY_PATH_PREFIX || "";
+    if (url.startsWith("/")) {
+      return prefix + url;
+    }
+    return url;
+  });
+
   return {
+    pathPrefix: process.env.ELEVENTY_PATH_PREFIX || "/",
     dir: {
       input: "src",
       output: "_site",
